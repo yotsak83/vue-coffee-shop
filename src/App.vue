@@ -11,11 +11,15 @@ const coffeeList = ref([
 ])
 
 function add(coffee) {
-  coffee.count++
+  if (coffee.count < 10) {
+    coffee.count++
+  }
 }
 
 function remove(coffee) {
-  coffee.count--
+  if (coffee.count > 0) {
+    coffee.count--
+  }
 }
 
 const count = ref(0)
